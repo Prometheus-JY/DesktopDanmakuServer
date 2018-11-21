@@ -1,6 +1,8 @@
-.idea
+logs
 .buildpath
 .project
 .settings
-vendor
-composer.lock
+.idea
+.DS_Store
+sftp-config.json
+vendor/*

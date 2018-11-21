@@ -1,16 +1,5 @@
 <?php 
-/**
- * This file is part of workerman.
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the MIT-LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @author walkor<walkor@workerman.net>
- * @copyright walkor<walkor@workerman.net>
- * @link http://www.workerman.net/
- * @license http://www.opensource.org/licenses/mit-license.php MIT License
- */
+
 use \Workerman\Worker;
 use \GatewayWorker\Gateway;
 use \Workerman\Autoloader;
@@ -18,11 +7,11 @@ use \Workerman\Autoloader;
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 // gateway 进程
-$gateway = new Gateway("Websocket://0.0.0.0:7272");
+$gateway = new Gateway("Websocket://0.0.0.0:6973");
 // 设置名称，方便status时查看
-$gateway->name = 'ChatGateway';
+$gateway->name = 'StudentGateway';
 // 设置进程数，gateway进程数建议与cpu核数相同
-$gateway->count = 4;
+$gateway->count = 1;
 // 分布式部署时请设置成内网ip（非127.0.0.1）
 $gateway->lanIp = '127.0.0.1';
 // 内部通讯起始端口。假如$gateway->count=4，起始端口为2300
